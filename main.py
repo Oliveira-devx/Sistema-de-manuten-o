@@ -14,7 +14,11 @@ def menu():
         print("==============================")
         print("4. Cadastrar colaborador")
 
-        opcao = int(input("Escolha uma opção: "))
+        try:
+            opcao = int(input("Escolha uma opção: "))
+        except ValueError:
+            print("Por favor, digite um número válido.")
+            continue
 
         if opcao == 1:
            print(listar_equipamentos())
@@ -29,5 +33,5 @@ def menu():
         else:
             print("Opção inválida. Tente novamente.")
 
-
-menu()
+if __name__ == "__main__":
+    menu()
