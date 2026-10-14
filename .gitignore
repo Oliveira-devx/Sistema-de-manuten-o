@@ -1,0 +1,12 @@
+# Ignorar arquivos do Python e ambiente virtual
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# IDEs
+.vscode/
+.idea/

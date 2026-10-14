@@ -1,0 +1,84 @@
+<!--
+    ==========================================================================
+    ARQUIVO: login.html
+    FINALIDADE: Tela de autenticação visual do sistema.
+    ==========================================================================
+-->
+
+<!DOCTYPE html>
+<!-- Define o idioma da página como Português do Brasil. -->
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar acentos. -->
+    <meta charset="UTF-8">
+    <!-- Garante que a página seja responsiva, ajustando-se à largura da tela do dispositivo. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da aba do navegador. -->
+    <title>Login | Sistema de Manutenção</title>
+    <!-- Importa a folha de estilos específica da tela de login. -->
+    <link rel="stylesheet" href="../static/css/login.css">
+    <!-- Importa o arquivo JavaScript para adicionar interatividades e animações dinâmicas. -->
+    <script src="../static/js/login.js" defer></script>
+</head>
+<body>
+    <!--
+        Container principal que centraliza todo o conteúdo da tela.
+        A classe 'login-container' é usada para aplicar o fundo e o alinhamento central.
+    -->
+    <div class="login-container">
+        <!--
+            Caixa do formulário de login.
+            A classe 'login-box' define o cartão branco centralizado com sombra.
+        -->
+        <div class="login-box">
+            <!-- Cabeçalho do formulário com o título do sistema. -->
+            <header class="login-header">
+                <!-- Ícone representativo (simulado por texto ou CSS) e título. -->
+                <div class="logo-placeholder">⚙️</div>
+                <h1>Sistema de Manutenção</h1>
+                <p>Entre com suas credenciais para acessar o painel</p>
+            </header>
+
+            <!--
+                Formulário de acesso.
+                Lembrando: Este formulário é apenas visual e não envia dados para backend nesta etapa.
+            -->
+            <form action="#" method="POST" class="login-form">
+                <!-- Agrupa o campo de usuário para facilitar a estilização e o foco. -->
+                <div class="input-group">
+                    <!-- Label descreve o campo para o usuário e para tecnologias de acessibilidade. -->
+                    <label for="usuario">Usuário</label>
+                    <!-- Campo de entrada de texto para o nome de usuário. -->
+                    <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
+                </div>
+
+                <!-- Agrupa o campo de senha. -->
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <!-- Container para o input e o botão de ver senha, permitindo posicionamento relativo. -->
+                    <div class="password-wrapper">
+                        <!-- Tipo 'password' oculta os caracteres digitados por segurança. -->
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                        <!-- Checkbox para alternar a visibilidade da senha. -->
+                        <label class="show-password-container">
+                            <input type="checkbox" id="toggle-password">
+                            <span class="checkbox-label">Ver senha</span>
+                        </label>/
+                    </div>
+                </div>
+
+                <!--
+                    Botão de envio do formulário.
+                    A classe 'btn-login' será usada para aplicar as animações de clique e hover.
+                -->
+                <button type="submit" class="btn-login">Acessar Sistema</button>
+            </form>
+
+            <!-- Rodapé simples com link de recuperação de senha (demonstrativo). -->
+            <footer class="login-footer">
+                <a href="#">Esqueceu sua senha?</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
